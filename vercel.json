@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/v1/patients(.*)",
+      "destination": "/api/patients"
+    },
+    {
+      "source": "/api/v2/medicines(.*)",
+      "destination": "/api/medicines"
+    },
+    {
+      "source": "/api/v3/appointments(.*)",
+      "destination": "/api/appointments"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+

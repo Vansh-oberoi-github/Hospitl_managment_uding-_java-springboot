@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AdminloginComponent implements OnInit {
 
-  username2 = 'user'
+  username2 = ''
   password2 = ''
   invalidLogin = false
 

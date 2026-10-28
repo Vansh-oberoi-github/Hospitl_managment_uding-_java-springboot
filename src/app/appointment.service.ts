@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../environments/environment';
 import { Appointment } from './appointment';
 
 @Injectable({
@@ -8,8 +9,7 @@ import { Appointment } from './appointment';
 })
 export class AppointmentService {
 
-  private baseUrl = "http://localhost:8899/api/v3/appointments";
-
+  private baseUrl = environment.appointmentApiUrl;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -24,7 +24,6 @@ export class AppointmentService {
   getAppointmentById(id: number): Observable<Appointment> {   
     return this.httpClient.get<Appointment>(`${this.baseUrl}/${id}`);
   }
-
 
   deleteAppointment(id: number): Observable<Object> {
     return this.httpClient.delete(`${this.baseUrl}/${id}`);

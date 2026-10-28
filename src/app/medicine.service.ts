@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../environments/environment';
 import { Medicine } from './medicine';
 
 @Injectable({
@@ -8,7 +9,7 @@ import { Medicine } from './medicine';
 })
 export class MedicineService {
 
-  private baseUrl = 'http://localhost:8090/api/v2/medicines';
+  private baseUrl = environment.medicineApiUrl;
   
   constructor(private httpClient: HttpClient) { }
 

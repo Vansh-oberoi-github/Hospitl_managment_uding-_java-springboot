@@ -9,7 +9,7 @@ import { AuthenticationService } from '../authentication.service';
 })
 export class DocloginComponent implements OnInit {
 
-  username = 'user'
+  username = ''
     password = ''
     invalidLogin = false
 
